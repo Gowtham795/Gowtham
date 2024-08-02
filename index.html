@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<style>
+    .borderr {
+        border: 3px solid black;
+        background: url(/gow.k/calculater/pngtree-cartoon-satellite-ruler-calculator-linear-education-background-picture-image_1458755.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;                  
+    }
+    @media screen and (max-width:600px) {
+        .borderr {
+            width: 320px;
+        }
+    }
+
+    @media screen and (min-width:601px) and (max-width:2000px) {
+        .borderr {
+            width: 900px;
+        }
+    }
+    #calculator{
+        backdrop-filter:blur(3px)   
+    }
+</style>
+
+<body class="bg-blue-100">
+    <div class="borderr mx-auto">
+        <div class="text-center md:py-10 py-5" id="calculator">
+            <h1 class="md:text-5xl text-2xl font-bold underline md:mb-5 mb-0">Calculator</h1>
+            <div class="md:mx-10 mx-5">
+            <input id="input" class=" w-full md:text-5xl text-2xl font-blod pl-4 md:py-8 py-2 bg-blue-100 my-5 md:rounded-3xl rounded-2xl" type="text"
+                    name="" readonly></input>
+            </div>
+             <div class="text-center">     
+                <div class="my-2 text-red-900">
+                    <button id="clearbtn" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">C</button>
+                    <button id="backspace" class="text-xl font-bold px-4 py-2 md:text-3xl md:px-7 md:py-2 bg-blue-600 rounded-lg">⌫</button>
+                    <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 rounded-lg">%</button>
+                    <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 rounded-lg">÷</button>
+                </div>
+                <div class="my-2">
+                    <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">7</button>
+                    <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">8</button>
+                    <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">9</button>
+                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 text-red-900 rounded-lg">*</button>
+                </div>
+                <div class="my-2">
+                    <button class=" number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">4</button>
+                    <button class=" number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">5</button>
+                    <button class=" number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">6</button>
+                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 text-red-900 rounded-lg">-</button>
+                </div>
+                <div class="my-2">
+                    <button
+                        class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">1</button>
+                    <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">2</button>
+                    <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">3</button>
+                    <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 text-red-900 rounded-lg">+</button>
+                </div>
+                <div class="my-2">
+                    <button class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">e</button>
+                    <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">0</button>
+                    <button id="dot" class="text-xl font-bold px-7 py-2 md:text-3xl md:px-11 md:py-2 bg-blue-600 rounded-lg">.</button>
+                    <button id="equalto" class="text-xl font-bold px-5 md:text-3xl md:px-9 md:py-2 py-2 bg-blue-600 text-red-900 rounded-lg">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        const display =document.getElementById("input")
+        const numberbtns =document.querySelectorAll(".number")
+        const clearbtn =document.getElementById("clearbtn")
+        const operaterbtn=document.querySelectorAll("#operater")
+        const backbtn =document.getElementById("backspace")
+        const equalbtn =document.getElementById("equalto")
+
+        clearbtn.addEventListener('click',()=>{
+            display.value=""
+        })
+
+        numberbtns.forEach(element => {
+            element.addEventListener('click',()=>{
+                display.value += element.textContent;
+            });
+        });
+
+        backbtn.addEventListener('click',()=>{
+            display.value=display.value.slice(0,-1)
+        })
+
+        document.getElementById('dot').addEventListener('click',()=>{
+            display.value +="."
+        })
+
+        operaterbtn.forEach(element =>{
+            element.addEventListener('click',()=>{
+                display.value += " " + element.textContent + " " 
+            })
+        })
+        equalbtn.addEventListener("click", () => {
+            const expression = display.value.trim();
+            if (expression) {
+                try {
+                    const result = eval(expression.replace(/\s/g, ''));
+                    display.value = result;
+                } catch (error) {
+                    display.value = "Error";
+                }            }
+        });
+
+
+
+
+
+        
+
+
+    </script>
+
+</body>
+
+</html>
