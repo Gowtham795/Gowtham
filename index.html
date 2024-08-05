@@ -11,10 +11,11 @@
 <style>
     .borderr {
         border: 3px solid black;
-        background: url(./pngtree-cartoon-satellite-ruler-calculator-linear-education-background-picture-image_1458755.jpg);
+        background: url(/gow.k/calculater/pngtree-cartoon-satellite-ruler-calculator-linear-education-background-picture-image_1458755.jpg);
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;                  
+        background-repeat: no-repeat; 
+        border-radius: 10px;                 
     }
     @media screen and (max-width:600px) {
         .borderr {
@@ -27,50 +28,56 @@
             width: 900px;
         }
     }
+    #input:focus{
+       outline: 0px;
+    }
     #calculator{
         backdrop-filter:blur(3px)   
     }
+    button:hover{
+          background-color: rgb(14, 17, 219);
+    }
 </style>
 
-<body class="bg-blue-100">
+<body class="bg-blue-200">
     <div class="borderr mx-auto">
         <div class="text-center md:py-10 py-5" id="calculator">
             <h1 class="md:text-5xl text-2xl font-bold underline md:mb-5 mb-0">Calculator</h1>
             <div class="md:mx-10 mx-5">
             <input id="input" class=" w-full md:text-5xl text-2xl font-blod pl-4 md:py-8 py-2 bg-blue-100 my-5 md:rounded-3xl rounded-2xl" type="text"
-                    name="" readonly></input>
+                    name="" readonly>
             </div>
              <div class="text-center">     
-                <div class="my-2 text-red-900">
+                <div class="my-2 text-red-50">
                     <button id="clearbtn" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">C</button>
                     <button id="backspace" class="text-xl font-bold px-4 py-2 md:text-3xl md:px-7 md:py-2 bg-blue-600 rounded-lg">⌫</button>
                     <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 rounded-lg">%</button>
-                    <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 rounded-lg">/</button>
+                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">/</button>
                 </div>
                 <div class="my-2">
                     <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">7</button>
                     <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">8</button>
                     <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">9</button>
-                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 text-red-900 rounded-lg">*</button>
+                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 text-red-50 rounded-lg">*</button>
                 </div>
                 <div class="my-2">
                     <button class=" number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">4</button>
                     <button class=" number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">5</button>
                     <button class=" number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">6</button>
-                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 text-red-900 rounded-lg">-</button>
+                    <button id="operater" class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 text-red-50 rounded-lg">-</button>
                 </div>
                 <div class="my-2">
                     <button
                         class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">1</button>
                     <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">2</button>
                     <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">3</button>
-                    <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 text-red-900 rounded-lg">+</button>
+                    <button id="operater" class="text-xl font-bold px-5 py-2 md:text-3xl md:px-9 md:py-2 bg-blue-600 text-red-50 rounded-lg">+</button>
                 </div>
                 <div class="my-2">
                     <button class="text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">e</button>
                     <button class="number text-xl font-bold px-6 py-2 md:text-3xl md:px-10 md:py-2 bg-blue-600 rounded-lg">0</button>
                     <button id="dot" class="text-xl font-bold px-7 py-2 md:text-3xl md:px-11 md:py-2 bg-blue-600 rounded-lg">.</button>
-                    <button id="equalto" class="text-xl font-bold px-5 md:text-3xl md:px-9 md:py-2 py-2 bg-blue-600 text-red-900 rounded-lg">=</button>
+                    <button id="equalto" class="text-xl font-bold px-5 md:text-3xl md:px-9 md:py-2 py-2 bg-blue-600 text-red-50 rounded-lg">=</button>
                 </div>
             </div>
         </div>
